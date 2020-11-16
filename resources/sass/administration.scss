@@ -1,0 +1,432 @@
+/* Administration, Main Wrapper */
+.administration{
+    height: 100vh;
+
+    /* Container Fluid */
+    .container-fluid{
+        min-height: 100%;
+
+        /* Page Content */
+        .page-content{
+            display: inline-block;
+            width: 100%;
+            transition: all 0.3s ease;
+            color: $admin-second-color;
+
+            /* Page Title */
+            h3{
+                width: 100%;
+                border-bottom: 1px solid $admin-second-color;
+                padding-left: 15px;
+            }
+
+            /*
+             ******** HOME PAGE
+             */ 
+            .home{
+                border-bottom: 1px solid $admin-second-color;
+                padding-bottom: 3em;
+                margin-bottom: 3em;
+
+                .cards{
+                    background-color: $light;
+                    border: 1px solid $admin-second-color;
+                    border-radius: 50px;
+                    font-size: 1.1em;
+                    box-shadow: 0px 3px 3px -1px rgba($admin-second-color, 0.75);
+
+                    span{
+                        background-color: $admin-second-color;
+                        font-size: 1em;
+                        color: $light;
+                    }
+                }
+            }
+
+            /*
+             *********** CATEGORY, USER, COACH AND BANNED PAGES
+             */ 
+             /* Table */
+            .custom-table{
+
+                /* Table Head */
+                thead{ 
+                    background-color: rgba($admin-second-color, 0.2);
+
+                    tr th{
+                        border-bottom: 1px solid $admin-second-color;
+                        color: $admin-second-color;
+                        font-size: 1.2em;
+                    }
+                }
+
+                /* Table Body */
+                tbody{
+                    border-bottom: 1px solid $admin-second-color;
+
+                    /* Even Rows */
+                    tr:nth-child(even){
+                        background-color: rgba($admin-second-color, 0.1);
+                    }
+
+                    /* Table Data */
+                    td{
+                        color: $admin-second-color;
+                        font-size: 1.2em;
+
+                        /* Disabled Category */
+                        del{
+                            color: $ban-delete;
+                        }
+
+                        i{
+                            font-size: 0.7em!important;
+                        }
+                    }
+
+                    /* When User is Admin */
+                    tr.admin{
+                        background-color: $admin-second-color!important;
+
+                        td,
+                        i{
+                            color: $light;
+                        }
+
+                        i{
+                            font-size: 0.7em!important;
+                        }
+                    }
+
+                    /* When User is Banned */
+                    tr.banned{
+                        background-color: $ban-delete!important;
+                        columns: $light;
+
+                        td,
+                        i{
+                            color: $light;
+                        }
+
+                        i{
+                            font-size: 0.7em!important;
+                        }
+                    }
+                }
+
+                /* Action Buttons */
+                button{
+                    border: none;
+                    outline: transparent;
+                    background-color: transparent;
+                    color: $admin-second-color;
+
+                    i.fa-trash-alt,
+                    i.fa-ban{
+                        color:$ban-delete;
+                    }
+
+                    :hover{
+                        background-color: transparent;
+                        color:$admin-second-color-hover;
+                    }
+                } 
+            }
+
+            /*
+             ******** MOTIVATION MESSAGES PAGE
+             */
+             /* Message DIV */
+            .message{
+                color: $main-color;
+                border: 1px solid rgba($admin-second-color, 0.5);
+                border-radius: 10px;
+                background-color: $light;
+
+                /* Message Title */
+                h4{
+                    font-size: 1.4em;
+                }
+
+                /* Message Body */
+                p{
+                    font-size: 1.2em;
+                }
+
+                /* Action Buttons */
+                button{
+                    border: none;
+                    outline: transparent;
+                    background-color: transparent;
+                    color: $admin-second-color;
+                    font-size: 1.2em;
+
+                    i.fa-trash-alt{
+                        color: $ban-delete;
+                    }
+                } 
+            }
+
+            
+            /*
+             *********** CATEGORY, MOTIVATION MESSAGES AND CONTACT MESSAGES PAGES
+             *********** EDIT MODAL AND ADD A NEW ITEM
+             */
+
+             /*
+             * Edit Category Modal
+             * Edit Motivation Message Modal
+             * Reply to Contact Message Modal
+             */
+            .edit-category,
+            .edit-message,
+            .reply-message{
+                background-color: rgba($admin-second-color, 0.5);
+
+                /* Modal Header */
+                .modal-header{
+                    background-color: $admin-color;
+                    color: $light;
+
+                    /* Close Modal Button */
+                    button{
+                        color: $light;
+                        width: fit-content;
+                        background-color: transparent;
+                    }
+                }
+
+                /* Modal Body */
+                .modal-body{
+                    /* Input */
+                    .form-control{
+                        outline: none;
+                        border: none;
+                        appearance: none;
+                        border-bottom: 1px solid $admin-second-color;
+                        border-radius: 0;
+                        width: 23em;
+                        margin-bottom: 0.5em;
+                        font-size: 1.2em;
+                        font-weight: 900;
+                        color: $admin-second-color;
+                    }
+
+                    .form-control:disabled{
+                        background-color: transparent;
+                    }
+
+                    textarea:disabled{
+                        resize: none;
+                        min-height: 10em;
+                    }
+
+                    // Textareas
+                    textarea{
+                        font-weight: 900;
+                        color: $admin-second-color;
+                        border: 1px solid $admin-second-color!important;
+                        border-radius: 5px!important;
+                    }
+
+                    // Button
+                    button{
+                        border: none;
+                        border-radius: 5px;
+                        outline: none;
+                        padding: 4px 0;
+                        width: 10em;
+                        font-size: 1.3em;
+                        font-weight: 500;
+                        background-color: $admin-second-color;
+                        color: #fff;
+                    }
+
+                    // Hover button
+                    button:hover{
+                        background-color: $admin-second-color-hover;
+                        font-weight: 900;
+                    }
+                }
+            }
+            
+
+            /* 
+             * Add Forms 
+             * Category and Motivation Messages
+             */
+            .add-form{
+                /* Inputs */
+                .form-control{
+                    outline: none;
+                    appearance: none;
+                    border: none;
+                    border-bottom: 1px solid $admin-second-color;
+                    border-radius: 0;
+                    width: 23em;
+                    margin-bottom: 0.5em;
+                    font-size: 1.2em;
+                    font-weight: 900;
+                    color: $admin-second-color;
+
+                    /* Inputs on small devices */
+                    @media(min-width: 768px){
+                    width: 30em;
+                    }
+                }
+            
+                /* Placeholders */
+                .form-control::placeholder{
+                    font-weight: 100;
+                    color: $admin-second-color;
+                }
+
+                // Textareas
+                textarea{
+                    border: 1px solid $admin-second-color!important;
+                    border-radius: 5px!important;
+                }
+
+                // Buttons
+                button{
+                    border: none;
+                    border-radius: 5px;
+                    outline: none;
+                    padding: 4px 0;
+                    width: 10em;
+                    font-size: 1.3em;
+                    font-weight: 500;
+                    background-color: $admin-second-color;
+                    color: #fff;
+                }
+
+                // Hover buttons
+                button:hover{
+                    background-color: $admin-second-color-hover;
+                    font-weight: 900;
+                }
+            }
+
+
+            /*
+             *********** CONTACT MESSAGES PAGE
+             */
+            .contact-messages{
+
+                .card{
+                    border-color: $admin-color;
+                
+                    .card-header{
+                        background-color: $admin-color;
+                        color: $light;
+                        font-size: 1.2em;
+                    }
+                }
+
+                .card-body{
+                    a{
+                        font-size: 1.2em;
+                        color: $admin-second-color;
+                    }
+
+                    p{
+                        font-size: 0.9em;
+                    }
+
+                    .float-right{
+                        border-bottom: 1px solid $admin-second-color;
+
+                        /* Action Buttons */
+                        button{
+                            border: none;
+                            border-radius: 50%;
+                            outline: transparent;
+                            background-color: transparent;
+                            color: $admin-second-color;
+                            font-size: 0.9em;
+
+                            i.fa-trash-alt{
+                                color: $ban-delete;
+                            }
+                        }
+                    } 
+                }
+            }
+
+            /* Delete and Read Message Wrapper div */
+            .del-read-messages{
+                .card{
+                    border: 1px solid $admin-color;
+
+                    .card-header{
+                        background-color: $admin-color;
+                        color: $light;
+                        font-size: 1.2em;
+
+                        span a{
+                            color: $light;
+                        }
+                    }
+
+                    .card-body{ 
+                        .messages{
+                            width: 80%;
+                            border: 1px solid $admin-second-color;
+                            border-radius: 5px;
+
+                            @media(max-width: 992px){
+                                width: 100%;
+                            }
+
+                            .users-msg{
+                                border-radius: 0 0 20px 0;
+                                background-color: $light;
+                                color: $admin-second-color;
+                                font-size: 1.2em;
+
+                                .date-time{
+                                    font-size: 0.9em;
+                                    color: rgba($admin-second-color, 0.7);
+                                }
+                            }
+
+                            .reply-msg{
+                                text-align: right;
+                                color: $admin-second-color;
+                                font-size: 1.2em;
+
+                                .date-time{
+                                    font-size: 0.9em;
+                                    color: rgba($admin-second-color, 0.7);
+                                }
+                            }
+                        }
+
+                        button{
+                            border: none;
+                            outline: transparent;
+                            background-color: transparent;
+                            color: $admin-second-color;
+                            width: fit-content;
+
+                            i.fa-trash-alt{
+                                color: $ban-delete;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*
+ * When Administration is toggled
+ * Page Content
+ */
+  .administration.toggled .page-content {
+    padding-left: 20em;
+  }
+
+
+

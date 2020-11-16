@@ -1,0 +1,104 @@
+/* Show conversations Button */
+#show-conversations{
+    position: fixed;
+    left: 0;
+    top: 1.9em;
+    border-radius: 0 4px 4px 0px;
+    width: 35px;
+    transition-delay: 0.3s;
+}
+
+/*
+ * When private-messages is toggled
+ * Show Conversations Button
+ */
+.private-messages.toggled #show-conversations{
+    left: -40px;
+}
+
+/*
+ * When private-messages is toggled
+ * Conversations
+ */
+.private-messages.toggled .conversations{
+    left: 0px;
+}
+
+/*
+ * When private-messages is toggled
+ * Page Content
+ */
+  .private-messages.toggled .content {
+    padding-left: 25em;
+  }
+
+/* Conversations */
+.conversations{
+    width: 25em;
+    height: 93%;
+    position: fixed;
+    top: 1.6em;
+    left: -25em;
+    z-index: 999;
+    transition: all 0.3s ease;
+    background-color: $light;
+    color: $main-color;
+    overflow-y: auto;
+
+    /* Conversations content */
+    .conversations-content{
+        max-height: calc(100% - 30px);
+        height: calc(100% - 30px);
+        overflow-y: auto;
+        position: relative;
+
+        /* Conversations title */
+        .conversations-title{
+            align-items: center;
+            border-bottom: 1px solid $main-color;
+
+            h4{
+                margin-top: 5px;
+            }
+
+            /* Close conversations Button */
+            #close-conversations {
+                cursor: pointer;
+                font-size: 20px;
+                color: $main-color;
+            }
+        }
+
+        a{
+            color: $main-color;
+
+            .conversation{
+                padding: 5px;
+                margin: 0 1em;
+                border-radius: 5px;
+                background-color: #fff;
+
+                img{
+                    width: 5em;
+                    height: 5em;
+                    border: 1px solid $main-color;
+                    border-radius: 50%;
+                    padding: 2px;
+                    margin-right: 1em;
+                }
+            }
+
+            .active{
+                margin-left: 2em;
+                margin-right: 0;
+                border-radius: 5px 0 0 5px;
+                border-right: unset;
+                background-color: $light-dark;
+            }
+        }
+
+        a:hover{
+            text-decoration: none;
+        }
+    }
+}

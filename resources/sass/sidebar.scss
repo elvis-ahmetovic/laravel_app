@@ -1,0 +1,242 @@
+/* Show Sidebar Button */
+#show-sidebar{
+    position: fixed;
+    left: 0;
+    top: 10px;
+    border-radius: 0 4px 4px 0px;
+    width: 35px;
+    transition-delay: 0.3s;
+}
+
+/*
+ * When Administration is toggled
+ * Show Sidebar Button
+ */
+.administration.toggled #show-sidebar{
+    left: -40px;
+}
+
+/*
+ * When Administration is toggled
+ * Sidebar
+ */
+.administration.toggled .sidebar{
+    left: 0;
+}
+
+/* Sidebar */
+.sidebar{
+    width: 18em;
+    height: 100%;
+    max-height: 100%;
+    position: fixed;
+    top: 0;
+    left: -20em;
+    z-index: 999;
+    transition: all 0.3s ease;
+    background-color: $admin-color;
+    color: $admin-second-color;
+
+    /* Sidebar Content */
+    .sidebar-content{
+        max-height: calc(100% - 30px);
+        height: calc(100% - 30px);
+        overflow-y: auto;
+        position: relative;
+
+        /* Sidebar Brand */
+        .sidebar-brand{
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid $admin-second-color;
+
+            /* Sidebar Brand Link */
+            a{
+                flex-grow: 1;
+                color: $light;
+                font-size: 1.3em;
+                font-weight: 900;
+            }
+
+            /* Sidebar Brand Link Hover */
+            a:hover{
+                text-decoration: none;
+            }
+
+            /* Close Sidebar Button */
+            #close-sidebar {
+                cursor: pointer;
+                font-size: 20px;
+                color: $light;
+            }
+        }
+
+        /* Sidebar Header */
+        .sidebar-header{
+            overflow: hidden;
+            border-bottom: 1px solid rgba($admin-second-color, 0.3);
+
+            /* Admin Picture */
+            .admin-pic{
+                float: left;
+                width: 60px;
+                padding: 2px;
+                border-radius: 12px;
+                margin-right: 15px;
+                overflow: hidden;
+
+                /* Image */
+                img{
+                    object-fit: cover;
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+
+            /* Admin Information */
+            .admin-info{
+                float: left;
+                color: $light;
+
+                span{
+                    display: block;
+                }
+
+                /* Admin Name */
+                .admin-name{
+                    font-size: 1.2em;
+                }
+
+                /* Role */
+                .admin-role{
+                    font-size: 1em;
+                }
+            }
+        }
+
+        /* Sidebar Menu */
+        .sidebar-menu{
+            /* List of Links */
+            ul{
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+
+                /* List Item */
+                li{ 
+                    /* Anchor Links */
+                    a{
+                        display: inline-block;
+                        width: 100%;
+                        text-decoration: none;
+                        position: relative;
+                        padding: 8px 30px 8px 20px;
+                        color: $light;
+                        font-size: 1.3em;
+
+                        /* icons */
+                        i{
+                            font-size: 0.8em;
+                            width: 2em;
+                            height: 2em;
+                            text-align: center;
+                            border-radius: 4px;
+                            background-color: $admin-second-color;
+                            color: $light;
+                        }
+                    }
+
+                    /* Links Hover */
+                    a:hover{
+                        font-weight: 900;
+                        background-color: rgba($admin-second-color, 0.1);
+                        display: inline-block;
+                        animation: swing ease-in-out 0.5s 1 alternate;
+                    }
+                }
+
+                li.isActive{
+                    font-weight: 900;
+                    background-color: rgba($admin-second-color, 0.3);
+
+                    .sidebar-submenu{
+                        display: block;
+                    }
+                }
+
+                /* Sidebar Dropdown Menu */
+                .sidebar-dropdown{
+                    /* Icons */
+                    a:after{
+                        font-family: "Font Awesome 5 Free";
+                        font-weight: 900;
+                        content: "\f105";
+                        display: inline-block;
+                        text-rendering: auto;
+                        text-align: center;
+                        position: absolute;
+                        right: 15px;
+                        top: 10px;
+                    }
+
+                    /* Sidebar Dropdown Submenu */
+                    .sidebar-submenu{
+                        display: none;
+                        background-color: $admin-second-color;
+
+                        /* List Items */
+                        li{
+                            font-size: 1em;
+
+                            /* Anchor Links */
+                            a{
+                                color: $admin-color;
+                                font-size: 1.2em;
+                                font-weight: 100;
+                            }
+
+                            /* Links Hover */
+                            a:hover{
+                                font-weight: 900;
+                                background-color: rgba($admin-color, 0.1);
+                            }
+
+                            /* Remove Icons on Submenu List Items */
+                            a:before{
+                                font-family: "Font Awesome 5 Free";
+                                font-weight: 900;
+                                content: "\f142";
+                                margin-right: 0.5em;
+                            }
+
+                            /* Remove Icons on Submenu List Items */
+                            a:after{
+                                content: none;
+                            }
+                        }
+
+                        li.isActive{
+                            font-weight: 900;
+                            background-color: rgba($admin-color, 0.4);
+
+                            a{
+                                color: $light;
+                            }
+                        }
+                    }
+                } 
+
+                /*
+                 * When Submenu Dropdown is Active
+                 *  Icon Rotate
+                 */
+                .sidebar-dropdown.isActive a:after {
+                    transform: rotate(90deg);
+                    right: 17px;
+                }
+            }
+        }
+    }
+}
+
+

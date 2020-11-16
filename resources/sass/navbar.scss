@@ -1,0 +1,115 @@
+// Navbar style
+.navbar{
+    background-color: rgba($second-color, 1);
+    height: 8vh;
+
+    // Navbar brand
+    .navbar-brand{
+        font-size: 2.5em;
+        color: $light;
+        font-family: $handwrite;
+
+        span{
+            font-size: 0.5em;  
+        }
+    }
+
+    // Navbar toggler (hamburger icon)
+    .navbar-toggler{
+        color: $light;
+        border: none;
+        outline: none;
+    }
+
+    // Navbar right side links
+    .nav-links{
+        .nav-item .nav-link{
+            margin-right: 1.5em;
+        }
+        
+        // Anchor color
+        a{
+            color: $light;
+            font-size: 1.5em;
+
+            span.relation{
+                color: $main-color;
+                background-color: $relation;
+            }
+
+            span.reply{
+                color: $light;
+                background-color: $request;
+            }
+
+            span.messages{
+                color: $main-color;
+                background-color: $light;
+            }
+        }
+        
+        // Anchor color hover
+        a:hover{
+            font-weight: 900;
+
+            span.relation{
+                color:$light;
+                background-color: $relation-hover;
+            }
+
+            span.reply{
+                background-color: $request-hover;
+            }
+
+            span.messages{
+                background-color: $light-dark;
+            }
+        }
+
+        // Navbar right side links on small and medium devices
+        @media(max-width: 992px){
+            background-color: rgba($main-color, 0.9);
+            border-radius: 5px;
+
+            // Anchor color on small and medium devices
+            a{
+                color: #fff;
+            }
+
+            // Anchor color hover
+            a:hover{
+                background-color: rgba($main-color, 0.9);
+                border-radius: 5px;
+            }
+        }
+
+        img{
+            width: 1.5em;
+            border-radius: 50%;
+        }
+
+        // Dropdown menu
+        .dropdown-menu{
+            background-color: rgba($main-color, 0.9);
+            border: none;
+            border-radius: 5px;
+
+            // Dropdown menu small and medium devices
+            @media(max-width: 992px){
+                width: 50%;
+                margin-left: 2em;
+            }
+
+            // Anchor color in dropdown menu
+            a{
+                color: #fff;
+            }
+
+            // Anchor hover
+            a:hover{
+                font-weight: 900;
+                background-color: rgba($main-color, 0.9);
+            }
+        }
+    }
+}

@@ -1,0 +1,189 @@
+/* Coach Cards, Row */
+.cards{ 
+
+    /* Card */
+    .card{
+        border: none;
+        box-shadow: 0px -2px 5px 0px rgba(0,0,0,0.5);
+        max-width: 25em;
+        min-width: 25em;
+
+        /* Card Header */
+        .card-header{
+            background-color: $main-color;
+            color: $light;
+            border: 1px solid $main-color;
+
+            /* Card Title */
+            .card-title{
+                font-weight: 600;
+            }
+
+            div{
+                margin: auto 1px;
+            }
+        }
+
+        /* Card Body */
+        .card-body{
+            background-color: $light;
+
+            /* Image */
+            img{
+                width: 6em;
+                border-radius: 50%;
+                box-shadow: 0px -2px 5px 0px rgba(0,0,0,0.5);
+                background-color: #fff;
+            }
+
+            /* Body Text */
+            .card-text{
+                color: $main-color;
+                font-size: 1.2em;
+
+                /* Dynamic text */
+                span{
+                    font-weight: 600;
+                }
+            }
+
+            /* Relation Div */
+            .relation{
+                position: relative;
+                left: 158px;
+                border: none;
+                border-radius: 5px 0 0 5px;
+                background-color: $relation;
+                color: $light;
+                font-size: 1.1em;
+            }
+
+            /* Request Div */
+            .request{
+                position: relative;
+                left: 149px;
+                border: none;
+                border-radius: 5px 0 0 5px;
+                background-color: $request;
+                color: $light;
+                font-size: 1.1em;
+            }
+        }
+
+        /* Card Footer */
+        .card-footer{
+            background-color: $second-color;
+            color: $light;
+            border: 1px solid $second-color;
+            
+            /* Footer Links Wrapp Div */
+            div{
+                margin: auto 1px;
+
+                /* Footer Links */
+                a{
+                    color: $light;
+                }
+
+                /* Footer Links Hover */
+                a:hover{
+                    text-decoration: underline;
+                }
+            }
+        } 
+    }
+
+    /* Footer Hover */
+    .card:hover{
+        box-shadow: -3px -5px 5px 0px rgba(0,0,0,0.5);
+    }
+
+    /* Modal */
+    .modal{
+
+        /* Modal Header */
+        .modal-header{
+            background-color: $second-color;
+            color: $light;
+            border: 1px solid $second-color;
+
+            /* Modal Title */
+            .modal-title{
+                font-weight: 600;
+            }
+
+            .close{
+                color: $light;
+            }
+        }
+
+        /* Modal Body */
+        .modal-body{
+            color: $main-color;
+
+            div{
+                border-radius: 10px;
+                background-color: $light;
+
+                /* Body Title */
+                .body-title{
+                    font-weight: 600;
+                    font-size: 1.3em;
+                }
+
+                /* Body Text */
+                .body-text{
+                    font-weight: 300;
+                    font-size: 1.2em;
+
+                    span{
+                        font-weight: 600;
+                    }
+                }
+            }
+
+            input{
+                font-size: 1.3em;
+                background-color: #fff;
+                color: $main-color;
+                border: none;
+                border-bottom: 1px solid $main-color;
+                border-radius: unset;
+            }
+
+            textarea{
+                font-size: 1.3em;
+                border: 1px solid $main-color;
+                outline: unset;
+            }
+
+            .btn{
+                font-size: 1.2em;
+                background-color: $main-color;
+                border-radius: 5px;
+                color: $light;
+                width: 10em;
+            }
+
+            .btn:hover{
+                background-color: $main-color-hover;
+            }
+        }
+
+        /* Modal Footer */
+        .modal-footer{
+            border-top: unset!important;
+
+            /* Buttones */
+            .btn{
+                font-size: 1.1em;
+            }
+
+            /* Buttons Hover */
+            .btn:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}
+

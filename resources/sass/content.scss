@@ -1,0 +1,920 @@
+.content{
+    display: inline-block;
+    width: 100%;
+    transition: all 0.3s ease;
+    color: $main-color;
+
+    h2{
+        border-bottom: 1px solid $main-color;
+        margin-bottom: 2em;
+    }
+
+    .main-info{
+        margin: 0 auto;
+
+        /* Card */
+        .card{
+            border: none;
+            width: 100%;
+
+            /* Card Header */
+            .card-header{
+                background-color: $main-color;
+                color: $light;
+                border: 1px solid $main-color;
+
+                /* Card Title */
+                .card-title{
+                    font-weight: 600;
+                }
+
+                div{
+                    margin: auto 1px;
+                }
+            }
+
+            /* Card Body */
+            .card-body{
+                background-color: $light;
+
+                /* Image */
+                img{
+                    width: 9em;
+                }
+
+                .card-title{
+                    a{
+                        font-size: 0.75em;
+                        margin-left: 1em;
+                    }
+                }
+
+                /* Body Text */
+                .card-text{
+                    color: $main-color;
+                    font-size: 1.2em;
+
+                    /* Dynamic text */
+                    span{
+                        font-weight: 600;
+                    }
+
+                    a{
+                        font-size: 0.8em;
+                        margin-left: 1em;
+                    }
+                }
+
+                .change-image{
+                    a{
+                        margin-left: unset;
+                    }
+                }
+            }
+        }
+    }
+
+
+    /* 
+    ********** Coach's Home page 
+    ********** Relation Row
+    */
+    .relations{
+        min-height: 40vh;
+
+        /* 
+         * New Relations Div
+         * Active Relations
+         * Finished Relations
+        */
+        .new-relations,
+        .finished-relations,
+        .active-relations,
+        .my-reviews{
+            background-color: $light;
+            max-height: 35vh;
+            overflow-y: auto;
+            color: $main-color;
+            border-radius: 5px;
+
+            ul{
+                li{
+                    font-size: 1.1em;
+                }
+
+                li:first-child{
+                    border-radius: 5px 5px 0 0;
+                }
+
+                li:last-child{
+                    border-radius: 0 0 5px 5px;
+                }
+            }
+
+            .delete{
+                color: $request;
+
+                :hover{
+                    color: $request-hover;
+                }
+            }
+        }
+
+        table{
+            color: $main-color;
+
+            /* Table Head */
+            thead{ 
+                background-color: rgba($main-color, 0.2);
+
+                tr th{
+                    border-bottom: 1px solid $main-color;
+                    color: $main-color;
+                    font-size: 1.2em;
+                }
+            }
+
+            /* Table Body */
+            tbody{
+                border-bottom: 1px solid $main-color;
+
+                /* Even Rows */
+                tr:nth-child(even){
+                    background-color: rgba($main-color, 0.1);
+                }
+
+                /* Table Data */
+                td{
+                    font-size: 1.1em;
+                }
+
+                /* Action Buttons */
+                button{
+                    border: none;
+                    outline: transparent;
+                    background-color: transparent;
+                    color: $main-color;
+                    width: fit-content;
+
+                    :hover{
+                        background-color: transparent;
+                        color: $main-color;
+                    }
+                }
+
+                .finish{
+                    color:$finish;
+
+                    :hover{
+                        color: $finish-hover;
+                    }
+                }
+
+                .delete{
+                    color:$request;
+
+                    :hover{
+                        color: $request-hover;
+                    }
+                }
+            }
+        }
+    }
+
+
+    /* 
+    ********** Coach's Home page 
+    ********** Review Row
+    */
+    .my-reviews{
+        background-color: rgba($main-color, 0.1);
+        width: 100%;
+        border-radius: 5px;
+
+        .review{
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 10px;
+            padding-bottom: unset;
+            font-size: 1.2em;
+            width: 100%;
+
+            .rewiev-author{
+                font-weight: 900;
+            }
+
+            .review-date{
+                font-size: 0.9em;
+                font-weight: 100;
+            }
+        }
+    }
+
+
+    /* 
+    ********** Coach's Home page 
+    ********** Notes Row
+    */
+    .my-notes{
+        background-color: rgba($main-color, 0.1);
+        width: 100%;
+        min-height: 40vh;
+        max-height: 60vh;
+        overflow-y: auto;
+        color: $main-color;
+        border-radius: 5px;
+
+        .note-form{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+
+            input{
+                width: 25em;
+                font-size: 1.3em; 
+                border: 1px solid $main-color;
+                border-radius: 5px 0 0 5px;
+
+                @media(max-width: 768px){
+                    width: 15em;
+                    border-radius: unset;
+                    border: none;
+                    border-bottom: 1px solid $main-color;
+                    margin-bottom: 1em;
+                }
+
+                @media(max-width: 992px){
+                    width: 20em;
+                }
+            }
+
+            input:focus{
+                background-color:transparent;
+                outline: none;
+            }
+
+            button{
+                width: 20%;
+                font-size: 1.3em; 
+                border: 1px solid $main-color;
+                border-radius: 0 5px 5px 0;
+
+                @media(max-width: 768px){
+                    width: 6em;
+                    border-radius: 5px;
+                }
+            }
+
+            button:hover{
+                font-weight: 900;
+                background-color: $main-color-hover;
+                color: $light;
+            }
+        }
+        
+    }
+
+    /* 
+    ********** Notes Table **********
+    */
+    .notes-table{
+        /* Table Head */
+        thead{ 
+            background-color: rgba($main-color, 0.2);
+
+            tr th{
+                border-bottom: 1px solid $main-color;
+                color: $main-color;
+                font-size: 1.2em;
+            }
+        }
+
+        /* Table Body */
+        tbody{
+            border-bottom: 1px solid $main-color;
+
+            /* Even Rows */
+            tr:nth-child(even){
+                background-color: rgba($main-color, 0.1);
+            }
+
+            /* Table Data */
+            td{
+                color: $main-color;
+                font-size: 1.2em;
+
+                /* Finish Note */
+                del{
+                    color: $ban-delete;
+                }
+            }
+        }
+
+        /* Action Buttons */
+        button{
+            border: none;
+            outline: transparent;
+            background-color: transparent;
+            color: $main-color;
+            font-size: 1em;
+
+            i.fa-trash-alt,
+            i.fa-ban{
+                color:$ban-delete;
+            }
+
+            :hover{
+                background-color: transparent;
+                color:$main-color-hover;
+            }
+        }
+    }
+
+
+    /* 
+    ********** Notes page **********
+    */
+    .note-form{
+        display: flex;
+        justify-content: center;
+        
+        input{
+            width: 25em;
+            font-size: 1.3em; 
+            border: 1px solid $main-color;
+            border-radius: 5px 0 0 5px;
+
+            @media(max-width: 768px){
+                width: 20em;
+                border-radius: unset;
+                border: none;
+                border-bottom: 1px solid $main-color;
+                margin-bottom: 1em;
+            }
+        }
+
+        button{
+            width: 20%;
+            font-size: 1.35em; 
+            border: 1px solid $main-color;
+            border-radius: 0 5px 5px 0;
+
+            @media(max-width: 768px){
+                width: 8em;
+                border-radius: 5px;
+            }
+        }
+
+        button:hover{
+            font-weight: 900;
+            background-color: $main-color-hover;
+            color: $light;
+        }
+
+    }
+
+    .action-note button{
+        width: fit-content;
+    }
+
+
+    /* 
+    ********** Edit Note **********
+    */
+    .edit-note{
+        background-color: rgba($main-color, 0.5);
+
+        /* Modal Header */
+        .modal-header{
+            background-color: $main-color;
+            color: $light;
+
+            /* Close Modal Button */
+            button{
+                color: $light;
+                width: fit-content;
+            }
+        }
+
+        /* Modal Body */
+        .modal-body{
+            /* Input */
+            .form-control{
+                outline: none;
+                border: none;
+                border-bottom: 1px solid $main-color;
+                border-radius: 0;
+                width: 23em;
+                margin-bottom: 0.5em;
+                font-size: 1.2em;
+                font-weight: 900;
+                color: $main-color;
+            }
+
+            .form-control:disabled{
+                background-color: transparent;
+            }
+
+            textarea:disabled{
+                resize: none;
+                min-height: 10em;
+            }
+
+            // Textareas
+            textarea{
+                font-weight: 900;
+                color: $main-color;
+                border: 1px solid $main-color!important;
+                border-radius: 5px!important;
+            }
+
+            // Button
+            button{
+                border: none;
+                border-radius: 5px;
+                outline: none;
+                padding: 4px 0;
+                width: 10em;
+                font-size: 1.3em;
+                font-weight: 500;
+                background-color: $main-color;
+                color: #fff;
+            }
+
+            // Hover button
+            button:hover{
+                background-color: $main-color-hover;
+                font-weight: 900;
+            }
+        }
+    }
+
+
+    /* 
+    ********** Sender Information **********
+    */
+    .sender-info{
+        .card{
+            width: 20em;
+            margin: 0 auto;
+            border: unset;
+
+            img{
+                border-radius: 15px 15px 0 0;
+            }
+
+            .card-body{
+                .card-title{
+                    font-size: 1.4em;
+                    font-weight: 900;
+                }
+
+                .card-text{
+                    font-size: 1.2em;
+                }
+            }
+
+            .action-btns{
+                button{
+                    width: fit-content;
+                    border-radius: 5px;
+                    font-size: 1em;
+                    padding: 5px 15px;
+                }
+
+                .cancel{
+                    color: $light;
+                    background-color: $request;
+                }
+
+                .cancel:hover{
+                    background-color: $request-hover;
+                    font-weight: 900;
+                }
+
+                .accept{
+                    color: $main-color;
+                    background-color: $relation;
+                }
+
+                .accept:hover{
+                    background-color: $relation-hover;
+                    font-weight: 900;
+                }
+
+                .finish{
+                    color: $light;
+                    background-color: $finish;
+                }
+
+                .finish:hover{
+                    font-weight: 900;
+                    background-color: $finish-hover;
+                }
+
+                .delete{
+                    color: $light;
+                    background-color: $request;
+                }
+
+                .delete:hover{
+                    font-weight: 900;
+                    background-color: $request-hover;
+                }
+
+                .message{
+                    color: $light;
+                    background-color: $main-color;
+                }
+
+                .message:hover{
+                    background-color: $main-color-hover;
+                    font-weight: 900;
+                }
+            }
+        }
+
+        /* Send Message Modal */
+        .modal{
+            /* Modal Header */
+            .modal-header{
+                background-color: $second-color;
+                color: $light;
+                border: 1px solid $second-color;
+
+                /* Modal Title */
+                .modal-title{
+                    font-weight: 600;
+                }
+
+                /* Close modal */
+                .close{
+                    color: $light;
+                    width: fit-content;
+                    background-color: transparent;
+                }
+            }
+
+            .modal-body{
+                /* Inputs */
+                input{
+                    font-size: 1.3em;
+                    background-color: transparent;
+                    color: $main-color;
+                    border: none;
+                    border-bottom: 1px solid $main-color;
+                    border-radius: unset;
+                    width: 100%;
+                }
+
+                /* Textarea */
+                textarea{
+                    font-size: 1.3em;
+                    border: 1px solid $main-color;
+                    outline: unset;
+                    width: 100%;
+                }
+
+                /* Button Hover */
+                .btn:hover{
+                    color: $light;
+                    background-color: $main-color-hover;
+                    font-weight: 900;
+                }
+            }
+        }
+        
+    }
+
+    input,
+    select{
+        outline: none;
+        border: none;
+        appearance: none;
+        border-bottom: 1px solid $main-color;
+        border-radius: 0;
+        width: 25em;
+        font-size: 1.2em;
+        color: $main-color;
+        background-color: transparent;
+
+        ::placeholder{
+            color: $main-color;
+            font-weight: 100;
+        }
+
+        :read-only{
+            background-color: transparent;
+        }
+    }
+
+    textarea{
+        font-size: 1.2em;
+        background-color: transparent;
+        width: 25em;
+        border: 1px solid $main-color;
+        border-radius: 5px;
+        resize: none;
+    }
+
+    // Buttons
+    button{
+        border: none;
+        outline: none;
+        width: 10em;
+        font-size: 1.3em;
+        font-weight: 500;
+        background-color: $main-color;
+        color: $light;
+
+            :hover{
+            color: $light;
+            background-color: $main-color-hover;
+            font-weight: 900;
+        }
+    }
+
+    /* Relation Buttons */
+    .relation-btns{
+        button{
+            border: unset;
+            background-color: transparent;
+            width: fit-content;
+            color: $finish;
+
+            :hover{
+                color: $finish-hover;
+                background-color: transparent;
+            }
+        }
+
+        .cancel{
+            color: $request;
+
+            :hover{
+                color: $request-hover;
+                background-color: transparent;
+            }
+        }
+
+        .accept{
+            color: $relation;
+
+            :hover{
+                color: $relation-hover;
+                background-color: transparent;
+            }
+        }
+    }
+
+
+
+    /* 
+    ********** Private Messages ********** 
+    */
+    .conversations-messages{
+        height: 80vh;
+        overflow: auto;
+        padding: 10px;
+        background-color: $light;
+        border-radius: 5px 5px 0 0;
+
+        .messages{
+            .message{
+                background-color: rgba($light-dark, 0.7);
+                color: $main-color;
+                border-radius: 0 5px 5px 20px;
+                width: 80%;
+                margin: 5px 0;
+
+                @media(max-width: 768px){
+                    width: 90%;
+                }
+
+                .message-header{
+                    padding: 5px 10px;
+                    border-radius: 0 5px 0 0;
+
+                    h5{
+                        font-weight: 900;
+
+                        span{
+                            font-weight: 100;
+                            font-size: 0.8em;
+                        }
+                    }
+                }
+
+                .message-body{
+                    padding: 5px 10px;
+
+                    p{
+                        font-size: 1.3em;
+                    }
+                }
+            }
+
+            .my-message{
+                background-color: rgba($second-color, 0.4);
+                border-radius: 5px 0 20px 5px;
+                width: 80%;
+                margin: 5px 0;
+                align-self: flex-end;
+
+                @media(max-width: 768px){
+                    width: 90%;
+                }
+
+                .message-header{
+                    padding: 5px 10px;
+                    border-radius: 5px 0 0 0;
+
+                    h5{
+                        font-weight: 900;
+
+                        span{
+                            font-weight: 100;
+                            font-size: 0.8em;
+                        }
+                    }
+                }
+
+                .message-body{
+                    padding: 5px 10px;
+
+                    p{
+                        font-size: 1.3em;
+                    }
+                }
+            }
+        }
+
+        button{
+            color: $main-color;
+            border-radius: 5px;
+            background-color: rgba($request, 0.2);
+            margin: 1em auto;
+        }
+
+        button:hover{
+            background-color: rgba($request, 0.4);
+        }
+
+        .contact-admin-messages{
+            background-color: rgba($light-dark, 0.4);
+            color: $main-color;
+            border-radius: 5px;
+            width: 100%;
+            padding: 10px;
+
+            .contact-message{
+                background-color: $light;
+                border-radius: 0 5px 5px 20px;
+                width: 80%;
+                margin: 5px 0;
+
+                @media(max-width: 768px){
+                    width: 90%;
+                }
+
+                .message-header{
+                    padding: 5px 10px;
+                    border-radius: 0 5px 0 0;
+
+                    h5{
+                        font-weight: 900;
+
+                        span{
+                            font-weight: 100;
+                            font-size: 0.8em;
+                        }
+                    }
+                }
+
+                .message-body{
+                    padding: 5px 10px;
+
+                    p{
+                        font-size: 1.3em;
+                    }
+                }
+            }
+
+            .admin-message{
+                background-color: rgba($second-color, 0.3);
+                border-radius: 5px 0 20px 5px;
+                width: 80%;
+                margin: 5px 0;
+                align-self: flex-end;
+
+                @media(max-width: 768px){
+                    width: 90%;
+                }
+
+                .message-header{
+                    padding: 5px 10px;
+                    border-radius: 0 5px 0 0;
+
+                    h5{
+                        font-weight: 900;
+
+                        span{
+                            font-weight: 100;
+                            font-size: 0.8em;
+                        }
+                    }
+                }
+
+                .message-body{
+                    padding: 5px 10px;
+
+                    p{
+                        font-size: 1.3em;
+                    }
+                }
+            }
+        }
+    }
+
+    .new-message-form{
+
+        .form-group{
+            width: 90%;
+        }
+
+        input{
+            width: 100%;
+            border: 1px solid $main-color;
+            border-radius: 0 0 0 5px;
+            padding: 0 10px;
+            font-size: 1.2em;
+            color: $main-color;
+        }
+
+        button{
+            width: 10%;
+            border: 1px solid $main-color;
+            border-radius: 0 0 5px 0;
+            padding: 0 10px;
+            font-size: 1.7em;
+        }
+
+        button:hover{
+                background-color: $main-color-hover;
+            }
+
+        @media(max-width: 768px){
+            display: flex;
+            flex-direction: column;
+
+            .form-group{
+                width: 100%;
+            }
+
+            input{
+                width: 100%;
+                border: 1px solid $main-color;
+                border-radius: 0 0 5px 5px;
+                padding: 0 10px;
+                font-size: 1.2em;
+                color: $main-color;
+            }
+
+            button{
+                width: 30%;
+                border: 1px solid $main-color;
+                border-radius: 5px;
+                padding: 0 10px;
+                font-size: 1.5em;
+            }
+
+            button:hover{
+                background-color: $main-color-hover;
+            }
+        }
+    }
+
+    .banned{
+        .logout{
+            position: absolute;
+            top: 1em;
+            right: 0;
+
+            .logout-btn{
+                width: 5em;
+                padding-right: 1em;
+                border-radius: 5px 0 0 5px;
+            }
+
+            .logout-btn:hover{
+                width: 7em;
+                color: $light;
+                font-weight: 900;
+                background-color: $main-color-hover;
+            }
+        }
+    }
+}
+
+

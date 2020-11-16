@@ -1,0 +1,313 @@
+/* Public Coach's Profil */
+.public{
+    
+    /* Left Column */
+    .left-column{
+
+        /* Card */
+        .card{
+            border: none;
+
+            /* Card Header */
+            .card-header{
+                background-color: $main-color;
+                color: $light;
+                border: 1px solid $main-color;
+
+                /* Card Title */
+                .card-title{
+                    font-weight: 600;
+                }
+
+                div{
+                    margin: auto 1px;
+                }
+            }
+
+            /* Card Body */
+            .card-body{
+                background-color: $light;
+
+                /* Image */
+                img{
+                    width: 9em;
+                }
+
+                /* Body Text */
+                .card-text{
+                    color: $main-color;
+                    font-size: 1.2em;
+
+                    /* Dynamic text */
+                    span{
+                        font-weight: 600;
+                    }
+                }
+
+                /* Relation Div */
+                .relation{
+                    align-self: flex-end;
+                    margin-right: -19px;
+                    border: none;
+                    border-radius: 5px 0 0 5px;
+                    background-color: $relation;
+                    color: $light;
+                    font-size: 1.1em;
+                }
+
+                /* Request Div */
+                .request{
+                    align-self: flex-end;
+                    margin-right: -19px;
+                    border: none;
+                    border-radius: 5px 0 0 5px;
+                    background-color: $request;
+                    color: $light;
+                    font-size: 1.1em;
+                }
+            }
+        }
+    }
+
+    /* Right Column */
+    .right-column{
+        /* Card */
+        .card{
+            border: none;
+
+            /* Card Header */
+            .card-header{
+                background-color: $main-color;
+                color: $light;
+                border: 1px solid $main-color;
+
+                /* Card Title */
+                .card-title{
+                    font-weight: 600;
+                }
+            }
+
+            /* Card Body */
+            .card-body{
+                background-color: $light;
+
+                /* Body Text */
+                .card-text{
+                    color: $main-color;
+                    font-size: 1.2em;
+                }
+            }
+        }
+    }
+
+    /* Buttons Group */
+    .buttons{
+        /* Button */
+        .btn{
+            outline: none;
+            width: 10em;
+            margin: 0 2em;
+            color: $light;
+        }
+
+        /* Button Hover */
+        .btn:hover{
+            font-weight: 900;
+        }
+
+        /* Make Relation Btn */
+        .relation{
+            background-color: $relation;
+        }
+
+        /* Make Relation Btn Hover */
+        .relation:hover{
+            background-color: $relation-hover;
+        }
+
+        /* Cancel Request Btn */
+        .cancel{
+            background-color: $request;
+        }
+
+        /* Cancel Request Btn Hover */
+        .cancel:hover{
+            background-color: $request-hover;
+        }
+
+        /* Cancel Request Btn */
+        .finish{
+            background-color: $finish;
+        }
+
+        /* Cancel Request Btn Hover */
+        .finish:hover{
+            background-color: $finish-hover;
+        }
+
+        /* Send Message Btn */
+        .message{
+            background-color: $second-color;
+        }
+
+        /* Send Message Btn Hover */
+        .message:hover{
+            background-color: $second-color-hover;
+        }
+
+        /* Back Button */
+        .back-btn{
+            color:blue;
+            border: 1px solid blue;
+        }
+    }
+
+    /* Modal */
+    .modal{
+
+        /* Modal Header */
+        .modal-header{
+            background-color: $second-color;
+            color: $light;
+            border: 1px solid $second-color;
+
+            /* Modal Title */
+            .modal-title{
+                font-weight: 600;
+            }
+
+            .close{
+                color: $light;
+            }
+        }
+
+        /* Modal Body */
+        .modal-body{
+            color: $main-color;
+
+            div{
+                border-radius: 10px;
+                background-color: $light;
+
+                /* Body Title */
+                .body-title{
+                    font-weight: 600;
+                    font-size: 1.3em;
+                }
+
+                /* Body Text */
+                .body-text{
+                    font-weight: 300;
+                    font-size: 1.2em;
+
+                    span{
+                        font-weight: 600;
+                    }
+                }
+            }
+
+            /* Inputs */
+            input{
+                font-size: 1.3em;
+                background-color: #fff;
+                color: $main-color;
+                border: none;
+                border-bottom: 1px solid $main-color;
+                border-radius: unset;
+            }
+
+            /* Textarea */
+            textarea{
+                font-size: 1.3em;
+                border: 1px solid $main-color;
+                outline: unset;
+            }
+
+            /* Button */
+            .btn{
+                font-size: 1.2em;
+                background-color: $main-color;
+                border-radius: 5px;
+                color: $light;
+                width: 10em;
+            }
+
+            /* Button Hover */
+            .btn:hover{
+                background-color: $main-color-hover;
+            }
+        }
+
+        /* Modal Footer */
+        .modal-footer{
+            border-top: unset!important;
+
+            /* Buttones */
+            .btn{
+                font-size: 1.1em;
+            }
+
+            /* Buttons Hover */
+            .btn:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+
+    /* Rewievs Div */
+    .rewievs{
+        background-color: $light;
+        color: $main-color;
+
+        /* Title */
+        h4{
+            font-size: 1.5em;
+        }
+
+        /* New Rewiev Form */
+        form{
+            margin-top: 2em;
+            width: 100%;
+
+            /* Textarea */
+            textarea{
+                font-size: 1.3em;
+                border: 1px solid $main-color;
+                outline: unset;
+            }
+
+            /* Add Button */
+            .btn{
+                font-size: 1.2em;
+                background-color: $main-color;
+                border-radius: 5px;
+                color: $light;
+                width: 10em;
+            }
+
+            /* Add Button Hover */
+            .btn:hover{
+                font-weight: 900;
+                background-color: $main-color-hover;
+            }
+        }
+
+        /* Single Rewiev */
+        .rewiev{
+            background-color: rgba($second-color, 0.1);
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 1.2em;
+
+            /* Author */
+            span{
+                font-weight: 900;
+            }
+
+            .review-date{
+                font-size: 0.9em;
+                font-weight: 100;
+            }
+        } 
+    }
+}

@@ -1,0 +1,87 @@
+// Register and Login divs
+.register,
+.login{
+    width: 100%;
+
+    // Title
+    h2{
+        color: $main-color;
+        font-weight: 600;
+    }
+
+    // Form group div
+    .form-group{
+        width: 100%;
+
+        // Inputs, selcts and texatea tags
+        .form-control,
+        .file-label{
+            outline: none;
+            appearance: none;
+            border: none;
+            border-bottom: 1px solid $main-color;
+            border-radius: 0;
+            width: 25em;
+            margin-bottom: 0.5em;
+            font-size: 1.2em;
+            font-weight: 900;
+            color: $main-color;
+        }
+
+        input[type="file"]{
+            font-weight: 100;
+        }
+
+        .form-control::placeholder,
+        label,
+        option:first-child{
+            font-weight: 100!important;
+            color: $main-color;
+        }
+
+        .file-label{
+            padding: 0.375rem 0.75rem;
+        }
+
+        // Textarea only
+        textarea{
+            border: 1px solid $main-color!important;
+            border-radius: 5px!important;
+            resize: none;
+        }
+
+        .thin{
+            font-weight: 100;
+        }
+
+        option{
+            font-weight: 900;
+            color: $main-color;
+        }
+
+        
+
+        // Form check labels
+        .form-check-label{
+            font-size: 1.2em;
+            color: $main-color;
+        }
+
+        // Buttons
+        button{
+            border: none;
+            outline: none;
+            width: 15em;
+            font-size: 1.3em;
+            font-weight: 500;
+            background-color: $main-color;
+            color: #fff;
+        }
+
+        // Hover buttons
+        button:hover{
+            background-color: $main-color-hover;
+            font-weight: 900;
+        }
+    }
+}
